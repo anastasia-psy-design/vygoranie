@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Когда тело говорит «стоп»</title>
+<meta name="description" content="Интерактивный конспект подкаста психологического центра InTreatment о выгорании, гиперответственности и восстановлении">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Когда тело говорит «стоп» - конспект подкаста InTreatment">
+<meta property="og:description" content="Выгорание, гиперответственность и путь к восстановлению: сигналы тела, практики и вопросы себе">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#FFFFFF">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+/* Layout: редакционный конспект InTreatment - одна колонка чтения, чередование белых и кремовых секций; теплые тона обозначают напряжение, мятные - восстановление */
+:root{
+  --bg:#FFFFFF;
+  --bg-alt:#FAF9F7;
+  --ink:#2D2C2A;
+  --ink-strong:#1A1816;
+  --muted:#6E6A64;
+  --line:#E6E1DA;
+  --mint:#E2E9E9;
+  --beige:#EFE9E3;
+  --lav:#E7E4EE;
+  --tense:#A8714F;
+  --calm:#6F928E;
+  --btn-bg:#2D2C2A;
+  --btn-fg:#FFFFFF;
+  --cta-bg:#2D2C2A;
+  --cta-fg:#FAF9F7;
+  --cta-muted:#BDB7AE;
+  --focus:#7C8F8F;
+  --font-display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body:"Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --gutter:clamp(20px,5vw,40px);
+  --step--1:.8125rem; --step-0:1rem; --step-1:1.125rem; --step-2:1.5rem; --step-3:2.125rem; --step-4:clamp(2.4rem,6.4vw,4rem);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1A1816; --bg-alt:#211F1C; --ink:#E9E5DF; --ink-strong:#F6F3EE; --muted:#A39D94; --line:#3A3632;
+    --mint:#27302F; --beige:#2F2A25; --lav:#2B2832; --tense:#D29A76; --calm:#94B8B3; --btn-bg:#F1EDE7; --btn-fg:#1A1816;
+    --cta-bg:#2A2724; --cta-fg:#F6F3EE; --cta-muted:#A39D94; --focus:#9FB3B3; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1A1816; --bg-alt:#211F1C; --ink:#E9E5DF; --ink-strong:#F6F3EE; --muted:#A39D94; --line:#3A3632;
+  --mint:#27302F; --beige:#2F2A25; --lav:#2B2832; --tense:#D29A76; --calm:#94B8B3; --btn-bg:#F1EDE7; --btn-fg:#1A1816;
+  --cta-bg:#2A2724; --cta-fg:#F6F3EE; --cta-muted:#A39D94; --focus:#9FB3B3; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;color:var(--ink-strong);text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:calc(720px + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-size:var(--step--1);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.note{font-size:var(--step--1);color:var(--muted)}
+
+/* progress */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:20;padding-top:env(safe-area-inset-top,0px);pointer-events:none}
+.progress span{display:block;height:3px;width:0;background:var(--ink)}
+
+/* logo */
+.logo{display:inline-flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink-strong);line-height:1}
+.logo-word{font-family:var(--font-display);font-weight:500;font-size:1.6rem;letter-spacing:.01em}
+.logo-sub{font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,48px) clamp(40px,6vw,64px);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;gap:24px}
+.hero h1 em{font-style:italic}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag-pill{padding:6px 14px;border-radius:999px;font-size:var(--step--1);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.inside{display:grid;gap:12px}
+.inside-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.inside-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.in-tile{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:16px;text-decoration:none;color:var(--ink);min-width:0;transition:transform .2s}
+.in-tile:hover{transform:translateY(-2px)}
+.in-tile b{font-weight:500;color:var(--ink-strong);line-height:1.3}
+.in-tile span{font-size:var(--step--1);color:var(--muted);line-height:1.45}
+.in-tile i{font-style:normal;margin-top:auto;padding-top:6px;color:var(--ink-strong)}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:clamp(16px,4vw,32px);border-bottom:1px solid var(--line)}
+.hero-top .note{max-width:34ch}
+.kicker{font-size:var(--step-1);color:var(--muted);max-width:44ch}
+.hero h1{font-size:var(--step-4);letter-spacing:-.01em}
+.subtitle{font-family:var(--font-display);font-style:italic;font-size:clamp(1.25rem,3vw,1.6rem);color:var(--ink);line-height:1.35}
+.lead{font-size:var(--step-1)}
+
+/* pull quotes */
+.pull{text-align:center;font-family:var(--font-display);font-size:clamp(1.3rem,3vw,1.625rem);line-height:1.4;color:var(--ink-strong);text-wrap:balance;padding:28px clamp(0px,4vw,40px);border-block:1px solid var(--line)}
+.pull-hero{font-style:italic;font-size:clamp(1.4rem,3.4vw,1.85rem);margin-top:8px}
+.pull.ask{font-style:italic}
+
+/* nav */
+.toc{background:var(--bg);border-bottom:1px solid var(--line)}
+.toc .wrap{max-width:1180px;display:flex;gap:8px;overflow-x:auto;padding-block:12px;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc .wrap>a:first-child{margin-left:auto}
+.toc .wrap>a:last-child{margin-right:auto}
+.toc.scrolls .wrap{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--gutter),#000 calc(100% - 48px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--gutter),#000 calc(100% - 48px),transparent 100%)}
+.toc a{flex:none;text-decoration:none;font-size:var(--step--1);padding:7px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap;transition:background .2s,color .2s}
+.toc a:hover{color:var(--ink);border-color:var(--muted)}
+
+/* sections */
+section.block{padding-block:clamp(48px,8vw,80px);scroll-margin-top:16px}
+section.block:nth-of-type(even){background:var(--bg-alt)}
+.stack{display:grid;gap:32px}
+.sec-head{display:grid;gap:10px}
+.sec-head h2{font-size:var(--step-3)}
+.prose{display:grid;gap:16px}
+.sub-h{font-size:var(--step-2)}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.card{padding:24px;border-radius:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.card h3{font-size:var(--step-1);font-family:var(--font-body);font-weight:500;color:var(--ink-strong)}
+.card .tag{font-size:var(--step--1);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.c-m{background:var(--mint)} .c-b{background:var(--beige)} .c-l{background:var(--lav)}
+.bare{background:var(--bg);border:1px solid var(--line)}
+section.block:nth-of-type(even) .bare{background:var(--bg)}
+
+/* checklist */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px}
+.sig{display:flex;gap:12px;align-items:flex-start;text-align:left;font-size:.95rem;line-height:1.45;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);cursor:pointer;transition:background .2s,border-color .2s}
+.sig .box{flex:none;width:18px;height:18px;margin-top:2px;border-radius:5px;border:1.5px solid var(--muted);display:grid;place-items:center}
+.sig[aria-pressed="true"]{border-color:var(--ink);background:var(--beige)}
+.sig[aria-pressed="true"] .box{background:var(--ink);border-color:var(--ink)}
+.sig[aria-pressed="true"] .box::after{content:"";width:8px;height:4px;border-left:2px solid var(--bg);border-bottom:2px solid var(--bg);transform:rotate(-45deg) translate(1px,-1px)}
+.verdict{padding:24px;border-radius:16px;background:var(--lav);display:grid;gap:8px}
+.verdict b{font-family:var(--font-display);font-weight:400;font-size:var(--step-2);color:var(--ink-strong);line-height:1.25}
+.dots{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.dots i{width:22px;height:6px;border-radius:999px;background:var(--bg);transition:background .25s}
+.dots i.on{background:var(--tense)}
+.verdict a{font-weight:500;text-underline-offset:3px}
+
+/* head vs body */
+.dialog{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.voice{padding:24px;border-radius:16px;display:grid;gap:14px;align-content:start}
+.voice h3{font-size:var(--step-1);font-family:var(--font-body);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-block;padding:7px 14px;border-radius:999px;background:var(--bg);font-size:.95rem;line-height:1.3}
+.chip.say{font-family:var(--font-display);font-style:italic;font-size:1.05rem}
+
+.examples{display:grid;gap:0}
+.examples li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:baseline;padding-block:14px;border-top:1px solid var(--line)}
+.examples li:last-child{border-bottom:1px solid var(--line)}
+.examples li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tense);transform:translateY(-1px)}
+
+/* nervous system */
+.ns{display:grid;gap:14px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
+.seg button{border:0;background:transparent;padding:10px 8px;border-radius:999px;cursor:pointer;font-size:.95rem;color:var(--muted);transition:background .2s,color .2s}
+.seg button[aria-selected="true"]{background:var(--btn-bg);color:var(--btn-fg)}
+.ns-panel{padding:24px;border-radius:16px;display:grid;gap:12px;transition:background .3s;min-height:236px;align-content:start}
+.ns-panel.s{background:var(--beige)} .ns-panel.p{background:var(--mint)}
+.ns-panel h3{font-size:var(--step-2)}
+.ns-list{display:grid;gap:8px}
+.ns-list li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:baseline}
+.ns-list li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tense)}
+.ns-panel.p .ns-list li::before{background:var(--calm)}
+
+/* breathing */
+.breath{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:28px;align-items:center;padding:28px;border-radius:16px;background:var(--mint)}
+@media (max-width:600px){.breath{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.b-stage{position:relative;width:200px;height:200px;display:grid;place-items:center}
+.b-ring{position:absolute;inset:0;border-radius:50%;border:1px dashed var(--calm);opacity:.6}
+.b-circle{width:96px;height:96px;border-radius:50%;background:var(--bg);display:grid;place-items:center;transform:scale(1);transition:transform 4s ease-in-out;box-shadow:0 0 0 1px var(--line)}
+.b-circle.in{transform:scale(1.9)}
+.b-label{font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:var(--ink-strong);transform:scale(1);transition:transform 4s ease-in-out}
+.b-circle.in .b-label{transform:scale(.53)}
+.b-text{display:grid;gap:12px}
+.b-text h3{font-size:var(--step-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 18px;border-radius:999px;border:1px solid var(--btn-bg);background:var(--btn-bg);color:var(--btn-fg);cursor:pointer;font-size:.95rem;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:600px){.breath .btn-row{justify-content:center}}
+
+/* zebra */
+.zt{display:grid;gap:16px}
+.zt .seg{max-width:360px}
+.track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:480px){.track{grid-template-columns:1fr}}
+.track li{padding:18px;border-radius:14px;background:var(--bg);border:1px solid var(--line);display:grid;gap:6px;align-content:start;min-width:0}
+.track .n{font-family:var(--font-display);font-size:var(--step-2);line-height:1;color:var(--muted)}
+.track b{font-weight:500;color:var(--ink-strong)}
+.track p{font-size:.95rem}
+.track li.end-ok{background:var(--mint);border-color:var(--mint)}
+.track li.end-loop{background:var(--beige);border:1px dashed var(--tense)}
+.loop-note{display:flex;gap:10px;align-items:center;font-size:.95rem;color:var(--muted)}
+.loop-note span{font-size:1.4rem;line-height:1;color:var(--tense)}
+
+/* weight chart */
+.chart{padding:24px;border-radius:16px;background:var(--bg);border:1px solid var(--line);display:grid;gap:14px}
+section.block:nth-of-type(even) .chart{background:var(--bg)}
+.chart svg{width:100%;height:auto;display:block}
+.chart .axis{stroke:var(--line);stroke-width:1}
+.chart .ax-t{fill:var(--muted);font-size:12px;font-family:var(--font-body)}
+.chart .l-pause{fill:none;stroke:var(--calm);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.chart .l-hold{fill:none;stroke:var(--tense);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.95rem}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:22px;height:3px;border-radius:2px;display:inline-block}
+
+/* expandable rows */
+.rows{display:grid;gap:10px}
+.row{border:1px solid var(--line);border-radius:14px;background:var(--bg);transition:background .25s,border-color .25s}
+.row.open{background:var(--lav);border-color:var(--lav)}
+.row-head{width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 20px;padding:18px 24px;background:none;border:0;text-align:left;cursor:pointer;border-radius:14px}
+.row-head .say{font-family:var(--font-display);font-style:italic;font-size:1.25rem;line-height:1.3;color:var(--ink-strong);min-width:0}
+.row-cue{flex:none;display:inline-flex;align-items:center;gap:10px;font-size:var(--step--1);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.row-cue .sign{font-size:20px;line-height:1;transition:transform .25s}
+.row.open .row-cue .sign{transform:rotate(45deg)}
+.row-body{padding:0 24px 20px}
+
+/* wants tool */
+.tool{padding:clamp(20px,4vw,32px);border-radius:16px;background:var(--bg);border:1px solid var(--line);display:grid;gap:22px}
+section.block:nth-of-type(even) .tool{background:var(--bg)}
+.step{display:grid;gap:12px}
+.step-l{display:flex;gap:10px;align-items:baseline;font-weight:500;color:var(--ink-strong)}
+.step-l span{font-family:var(--font-display);font-weight:400;font-size:var(--step-2);line-height:1;color:var(--muted)}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick button{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg-alt);cursor:pointer;font-size:.95rem;transition:background .2s,border-color .2s}
+.pick button[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg);border-color:var(--btn-bg)}
+input[type="text"],textarea{width:100%;font:inherit;font-size:.95rem;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{min-height:84px;resize:vertical}
+.want-msg{padding:14px 16px;border-radius:12px;background:var(--mint);font-size:.95rem}
+.want-msg.warn{background:var(--beige)}
+.promises{display:grid;gap:12px}
+.promises h3{font-size:var(--step-2)}
+.prom{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 14px;border-radius:12px;background:var(--bg);border:1px solid var(--line)}
+.prom .tick{width:22px;height:22px;border-radius:6px;border:1.5px solid var(--muted);background:transparent;cursor:pointer;display:grid;place-items:center;padding:0}
+.prom.done .tick{background:var(--calm);border-color:var(--calm)}
+.prom.done .tick::after{content:"";width:9px;height:4px;border-left:2px solid var(--bg);border-bottom:2px solid var(--bg);transform:rotate(-45deg) translate(1px,-1px)}
+.prom .txt{font-size:.95rem;line-height:1.4}
+.prom .txt small{display:block;color:var(--muted);font-size:var(--step--1)}
+.prom.done .txt{color:var(--muted)}
+.prom .del{border:0;background:none;cursor:pointer;color:var(--muted);font-size:1.25rem;line-height:1;padding:4px 6px}
+
+/* consequences */
+.cost{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}
+.cost li{padding:14px 16px;border-radius:12px;background:var(--beige);font-size:.95rem;line-height:1.4}
+
+/* questions */
+.q{border:1px solid var(--line);border-radius:16px;background:var(--bg);overflow:hidden}
+section.block:nth-of-type(odd) .q{background:var(--bg-alt)}
+.q-head{display:flex;gap:16px;align-items:baseline;padding:20px 24px;cursor:pointer;width:100%;text-align:left;background:none;border:0}
+.q-num{font-family:var(--font-display);font-size:var(--step-3);line-height:1;color:var(--muted);flex:none;width:1.4em}
+.q-title{font-family:var(--font-display);font-style:italic;font-size:1.3rem;line-height:1.3;color:var(--ink-strong);flex:1;min-width:0}
+.q-sign{flex:none;font-size:22px;color:var(--muted);transition:transform .25s}
+.q.open .q-sign{transform:rotate(45deg)}
+.q-body{padding:0 24px 24px 88px;display:grid;gap:12px}
+@media (max-width:560px){.q-body{padding-left:24px}}
+.qs{display:grid;gap:12px}
+
+/* practices */
+.practice{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:16px;align-items:start;padding-block:20px;border-top:1px solid var(--line)}
+.p-txt{display:grid;gap:4px;min-width:0}
+.p-txt b{font-weight:500;color:var(--ink-strong);line-height:1.4;padding-top:8px}
+.p-txt p{color:var(--ink);font-size:.95rem}
+.practice .mark{margin-top:6px}
+.practice:last-child{border-bottom:1px solid var(--line)}
+.practice .ic{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--ink-strong)}
+@media (max-width:520px){.practice{grid-template-columns:40px minmax(0,1fr)}.practice .mark{grid-column:2;justify-self:start}}
+.mark{display:inline-flex;align-items:center;gap:8px;font-size:var(--step--1);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;white-space:nowrap}
+.mark[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg);border-color:var(--btn-bg)}
+
+/* formula */
+.formula{padding:clamp(20px,4vw,28px);border-radius:16px;background:var(--lav);display:grid;gap:16px}
+.f-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;counter-reset:f}
+.f-steps li{position:relative;padding:14px;border-radius:12px;background:var(--bg);font-size:.95rem;line-height:1.4;display:grid;gap:4px;align-content:start}
+.f-steps li::before{counter-increment:f;content:counter(f);font-family:var(--font-display);font-size:var(--step-1);line-height:1;color:var(--muted)}
+.f-steps li:not(:last-child)::after{content:"→";position:absolute;right:-21px;top:50%;transform:translateY(-50%);color:var(--muted)}
+@media (max-width:680px){.f-steps{grid-template-columns:1fr;gap:26px}.f-steps li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px;transform:translateX(-50%)}}
+
+/* answers summary */
+.summary{padding:clamp(20px,4vw,32px);border-radius:16px;background:var(--bg);border:1px solid var(--line);display:grid;gap:18px}
+section.block:nth-of-type(even) .summary{background:var(--bg)}
+.summary h3{font-size:var(--step-2)}
+.sum-list{display:grid;gap:0}
+.sum-item{display:grid;gap:4px;padding-block:14px;border-top:1px solid var(--line)}
+.sum-item:last-child{border-bottom:1px solid var(--line)}
+.sum-item .sq{font-family:var(--font-display);font-style:italic;color:var(--ink-strong);line-height:1.35}
+.sum-item .sa{white-space:pre-wrap;font-size:.95rem}
+.sum-item .sa.empty{color:var(--muted)}
+#sumText{min-height:160px}
+.summary .card a{font-weight:500;text-underline-offset:3px}
+
+/* takeaways */
+.takeaways{counter-reset:t;display:grid}
+.takeaways li{display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:12px;align-items:baseline;padding-block:16px;border-top:1px solid var(--line)}
+.takeaways li:last-child{border-bottom:1px solid var(--line)}
+.takeaways li::before{counter-increment:t;content:counter(t);font-family:var(--font-display);font-size:var(--step-2);line-height:1.1;color:var(--muted)}
+
+/* CTA */
+.cta{background:var(--cta-bg);color:var(--cta-fg);padding-block:clamp(56px,9vw,88px)}
+.cta .wrap{display:grid;gap:24px}
+.cta h2{color:var(--cta-fg);font-size:var(--step-3)}
+.cta .eyebrow{color:var(--cta-muted)}
+.cta p.lead{color:var(--cta-muted)}
+.cta-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin-top:8px}
+.cta-card{display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:16px;border:1px solid rgba(255,255,255,.16);text-decoration:none;color:var(--cta-fg);transition:background .2s}
+.cta-card:hover{background:rgba(255,255,255,.06)}
+.cta-card .t{font-family:var(--font-display);font-size:var(--step-2);line-height:1.2}
+.cta-card .d{color:var(--cta-muted);font-size:.95rem}
+.cta-card .go{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:.95rem;margin-top:auto;padding-top:8px}
+.cta-card .go span{font-size:var(--step--1);color:var(--cta-muted);font-weight:400}
+.cta-card.primary{background:var(--cta-fg);color:var(--cta-bg);border-color:var(--cta-fg)}
+.cta-card.primary .d,.cta-card.primary .go span{color:#6E6A64}
+.cta-card.primary:hover{background:var(--cta-fg);opacity:.92}
+.foot{padding-block:28px}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+.foot .note a{text-underline-offset:3px}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <a class="logo" href="https://intreatment.online" target="_blank" rel="noopener" aria-label="InTreatment"><span class="logo-word">InTreatment</span><span class="logo-sub">психологический центр</span></a>
+      <p class="note">Конспект выпуска подкаста</p>
+    </div>
+    <p class="kicker">Подкаст психологического центра InTreatment со специалистом в области психосоматики</p>
+    <h1>Когда тело говорит <em>«стоп»</em></h1>
+    <p class="subtitle">Выгорание, гиперответственность и путь к восстановлению</p>
+    <div class="tags"><span class="tag-pill c-b">Выгорание</span><span class="tag-pill c-l">Гиперответственность</span><span class="tag-pill c-m">Восстановление</span></div>
+    <p class="lead">Человек просыпается уже уставшим, собирает детей, отвечает на сообщения, едет на работу, принимает решения и решает чужие проблемы, а вечером у него не остается сил даже на близких. Когда появляется возможность отдохнуть, расслабиться не получается: в голове крутятся дела, рука тянется к телефону, плечи напряжены, и сон уже не восстанавливает, как раньше</p>
+    <p class="pull pull-hero">Со стороны такой человек выглядит благополучным, успешным и ответственным, хотя внутри ему приходится прикладывать все больше усилий, чтобы держать прежний уровень</p>
+    <div class="inside">
+      <p class="eyebrow">Внутри конспекта</p>
+      <div class="inside-grid">
+        <a class="in-tile c-b" href="#signals"><b>Самопроверка</b><span>Сигналы перегрузки, которые легко пропустить</span><i>↓</i></a>
+        <a class="in-tile c-m" href="#breath"><b>Длинный выдох</b><span>Минута дыхания вместе с кругом</span><i>↓</i></a>
+        <a class="in-tile c-l" href="#want"><b>Что я сейчас хочу?</b><span>Практика договоренностей с телом</span><i>↓</i></a>
+        <a class="in-tile bare" href="#questions"><b>Вопросы себе</b><span>Ответы можно подытожить и сохранить</span><i>↓</i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Разделы конспекта">
+  <div class="wrap">
+    <a href="#signals">Узнаете себя?</a>
+    <a href="#body">Сигналы тела</a>
+    <a href="#hyper">Гиперответственность</a>
+    <a href="#zebra">Зебра и лев</a>
+    <a href="#rest">Отдых</a>
+    <a href="#want">Что я хочу</a>
+    <a href="#cost">Цена</a>
+    <a href="#questions">Вопросы себе</a>
+    <a href="#sum">Главное</a>
+  </div>
+</nav>
+
+<main>
+<section class="block" id="signals">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Часть 1</p><h2>Выгорание начинается раньше, чем кажется</h2></div>
+    <div class="prose">
+      <p>Выгорание обычно представляют как момент, когда человек уже не может встать с кровати. Задолго до этого тело подает небольшие и регулярные сигналы перегрузки, которые легко списать на нервы, возраст или тяжелую неделю</p>
+    </div>
+    <p class="eyebrow">Что из этого бывает у вас в последние недели?</p>
+    <div class="checks" id="checks">
+      <button class="sig" aria-pressed="false"><span class="box"></span>Забываю слова посреди фразы</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Захожу в комнату и не могу вспомнить зачем</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Трудно удерживать внимание на одной задаче</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Сплю, и все равно сон не дает прежнего восстановления</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Плечи и шея почти всегда напряжены</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Дергается глаз, и я списываю это на нервы</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Замечаю холод или усталость, только когда они становятся сильными</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Пропускаю обед или ем на бегу, потому что нельзя отвлечься</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>На отдыхе рука сама тянется к телефону</button>
+      <button class="sig" aria-pressed="false"><span class="box"></span>Раздражают люди, которые отдыхают, пока я работаю</button>
+    </div>
+    <div class="verdict" aria-live="polite">
+      <b id="vTitle">Отметьте то, что узнаете</b>
+      <p id="vText">Здесь появится короткое пояснение</p>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+      <p class="note">Список собран из примеров выпуска и помогает присмотреться к себе, поставить по нему диагноз нельзя</p>
+    </div>
+    <div class="card c-m">
+      <span class="tag">Защитное торможение</span>
+      <h3>Почему забываются слова и теряется концентрация</h3>
+      <p>Специалист объясняет эти сигналы защитным торможением. Мозг переходит в режим энергосбережения, и префронтальная кора, которая отвечает за логику, будто переключается на резервный генератор</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="body">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Часть 2</p><h2>Тело как самый честный индикатор</h2></div>
+    <div class="prose">
+      <p>Психика может долго подгонять человека установками, и он продолжает на них работать, даже когда сил уже нет. В разговоре тело названо самым честным органом: если долго не замечать потребности, оно все равно покажет перегрузку через симптомы, и обычно раньше, чем человек готов себе в ней признаться</p>
+    </div>
+    <div class="dialog">
+      <div class="voice c-l">
+        <p class="tag eyebrow">На уровне мыслей</p>
+        <div class="chips">
+          <span class="chip say">«Надо»</span>
+          <span class="chip say">«Будь полезной»</span>
+          <span class="chip say">«Сделай лучше»</span>
+          <span class="chip say">«Держи все под контролем»</span>
+          <span class="chip say">«Еще немного»</span>
+        </div>
+      </div>
+      <div class="voice c-b">
+        <p class="tag eyebrow">На уровне тела</p>
+        <div class="chips">
+          <span class="chip">Напряжение в плечах</span>
+          <span class="chip">Сон без восстановления</span>
+          <span class="chip">Забывчивость</span>
+          <span class="chip">Дергается глаз</span>
+          <span class="chip">Болезнь в первый день отпуска</span>
+        </div>
+      </div>
+    </div>
+    <div class="card bare">
+      <span class="tag">Потребительское отношение к телу</span>
+      <p>Мы ждем от тела, что оно будет выполнять команды, терпеть, держаться и не мешать работе и обязательствам. Со временем человек постепенно разучается слышать себя</p>
+    </div>
+    <h3 class="sub-h">Как теряется контакт с базовыми потребностями</h3>
+    <ul class="examples">
+      <li><span>Холодно, и окно так и остается открытым, потому что «нельзя отвлечься»</span></li>
+      <li><span>Дергается глаз, и это объясняется «нервами»</span></li>
+      <li><span>Голод терпится до конца рабочей задачи</span></li>
+      <li><span>Отдых, сон, вода и еда уходят на второй план</span></li>
+    </ul>
+    <div class="card c-m">
+      <span class="tag">Пример из выпуска</span>
+      <p>Ребенка учат распознавать сигналы тела, например вовремя замечать, что он проголодался. Взрослый человек может постепенно утратить эту связь, и тогда в терапии ему приходится заново учиться слышать базовые потребности</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="hyper">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Часть 3</p><h2>Гиперответственность и нервная система</h2></div>
+    <div class="grid2">
+      <div class="card c-m"><span class="tag">Ответственность</span><p>Способность видеть причинно-следственные связи и управлять своими действиями</p></div>
+      <div class="card c-b"><span class="tag">Гиперответственность</span><p>Привычка брать на себя слишком много, в том числе отвечать за других людей и за ситуации, которыми человек управлять не может</p></div>
+    </div>
+    <div class="prose">
+      <p>Когда перегрузка становится постоянной, нервная система почти все время работает в одном режиме. Переключайте вкладки, чтобы сравнить два состояния</p>
+    </div>
+    <div class="ns">
+      <div class="seg" role="tablist" aria-label="Режимы нервной системы">
+        <button role="tab" aria-selected="true" data-m="s" id="tab-s">Симпатическая</button>
+        <button role="tab" aria-selected="false" data-m="p" id="tab-p">Парасимпатическая</button>
+      </div>
+      <div class="ns-panel s" id="nsPanel" role="tabpanel" aria-live="polite">
+        <p class="eyebrow" id="nsTag"></p>
+        <h3 id="nsTitle"></h3>
+        <ul class="ns-list" id="nsList"></ul>
+        <p class="note" id="nsNote"></p>
+      </div>
+    </div>
+    <div class="card bare">
+      <span class="tag">Кортизол и адреналин</span>
+      <p>В начале нового проекта гормоны стресса дают энергию, ясность и даже ощущение всемогущества. Если такой режим становится постоянным, организм продолжает выбрасывать их и тогда, когда никакой физической угрозы рядом нет. Человек может лежать на диване и при этом оставаться внутри в состоянии «бей или беги»: мысли о проектах, начальнике, ипотеке и экзаменах поддерживают ощущение угрозы</p>
+    </div>
+    <div class="breath" id="breath">
+      <div class="b-stage">
+        <span class="b-ring" aria-hidden="true"></span>
+        <div class="b-circle" id="bCircle"><span class="b-label" id="bLabel">выдох</span></div>
+      </div>
+      <div class="b-text">
+        <p class="eyebrow">Минута на переключение</p>
+        <h3>Длинный выдох</h3>
+        <p>В выпуске дыхание названо переключателем нервной системы: без глубокого выдоха расслабление не наступает. Подышите вместе с кругом одну минуту, вдох на четыре счета и выдох на шесть</p>
+        <div class="btn-row"><button class="btn" id="bBtn">Начать</button></div>
+        <p class="note" id="bCount" aria-live="polite">Шесть дыхательных циклов</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="zebra">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Часть 4</p><h2>Зебра, лев и гиря</h2></div>
+    <div class="prose">
+      <p>Чтобы объяснить хронический стресс, в разговоре вспоминают пример из книги Роберта Сапольски о зебре и льве. Сравните, как проходит стрессовая реакция у зебры и у человека</p>
+    </div>
+    <div class="zt">
+      <div class="seg" role="tablist" aria-label="Чья реакция">
+        <button role="tab" aria-selected="true" data-z="zebra">Зебра</button>
+        <button role="tab" aria-selected="false" data-z="human">Человек</button>
+      </div>
+      <ol class="track" id="track" aria-live="polite"></ol>
+      <p class="loop-note" id="loopNote"></p>
+    </div>
+    <div class="card c-l">
+      <span class="tag">Метафора гири</span>
+      <p>Перегрузку можно сравнить с гирей, которую человек держит и не опускает. Эта гиря может быть мысленной: задачи, переживания, контроль, ответственность и необходимость все успеть, и без пауз между подходами напряжение становится постоянным</p>
+    </div>
+    <figure class="chart" style="margin:0">
+      <svg viewBox="0 0 640 220" role="img" aria-label="Схема: напряжение с паузами снижается после каждого подхода, без пауз остается высоким и растет">
+        <line class="axis" x1="48" y1="180" x2="620" y2="180"/>
+        <line class="axis" x1="48" y1="24" x2="48" y2="180"/>
+        <text class="ax-t" x="56" y="20">напряжение</text>
+        <text class="ax-t" x="620" y="200" text-anchor="end">время</text>
+        <path class="l-pause" d="M48,180 L104,84 L144,166 L200,84 L240,166 L296,84 L336,166 L392,84 L432,166 L488,84 L528,166 L584,84 L620,150"/>
+        <path class="l-hold" d="M48,180 L104,76 L150,72 L200,66 L250,64 L300,58 L350,56 L400,50 L450,46 L500,42 L560,38 L620,34"/>
+      </svg>
+      <figcaption class="legend">
+        <span><i style="background:var(--calm)"></i>Подходы с паузами</span>
+        <span><i style="background:var(--tense)"></i>Гиря без пауз</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block" id="rest">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Часть 5</p><h2>Почему отдых не восстанавливает</h2></div>
+    <div class="prose">
+      <p>Трудность с отдыхом редко объясняется одной привычкой работать. За ней обычно стоят установки и чувства, которые человек давно перестал замечать</p>
+    </div>
+    <p class="eyebrow">Нажмите на фразу, чтобы увидеть, что может за ней стоять</p>
+    <div class="rows">
+      <div class="row">
+        <button class="row-head" aria-expanded="false"><span class="say">«Лучший отдых - смена деятельности»</span><span class="row-cue">Что за этим<span class="sign" aria-hidden="true">+</span></span></button>
+        <div class="row-body" hidden><p>Отдых превращается в еще одну работу, и у тела не остается времени на восстановление</p></div>
+      </div>
+      <div class="row">
+        <button class="row-head" aria-expanded="false"><span class="say">«Дела не ждут»</span><span class="row-cue">Что за этим<span class="sign" aria-hidden="true">+</span></span></button>
+        <div class="row-body" hidden><p>Страх потерять контроль и ожидание, что после паузы дел станет еще больше</p></div>
+      </div>
+      <div class="row">
+        <button class="row-head" aria-expanded="false"><span class="say">«Отдыхать стыдно»</span><span class="row-cue">Что за этим<span class="sign" aria-hidden="true">+</span></span></button>
+        <div class="row-body" hidden><p>Чувство вины за отдых, которое часто приходит из семьи, где родители, бабушки и дедушки постоянно работали и не умели останавливаться</p></div>
+      </div>
+      <div class="row">
+        <button class="row-head" aria-expanded="false"><span class="say">«Они отдыхают, а я работаю»</span><span class="row-cue">Что за этим<span class="sign" aria-hidden="true">+</span></span></button>
+        <div class="row-body" hidden><p>Раздражение на тех, кто отдыхает, подсказывает, какие правила об отдыхе и праве на паузу живут внутри</p></div>
+      </div>
+    </div>
+    <p class="pull ask">Как я отношусь к другим людям, которые отдыхают, когда я работаю?</p>
+    <h3 class="sub-h">Когда восстановление становится задачей</h3>
+    <div class="prose">
+      <p>Массаж, спортзал, медитации, блэкаут-шторы и специальные будильники приносят облегчение ненадолго, если человек продолжает жить в прежнем режиме. Отдых легко превращается в еще один пункт списка дел</p>
+    </div>
+    <div class="grid2">
+      <div class="card c-b"><span class="tag">Спортзал</span><p>Тренировки полезны, хотя для истощенного тела интенсивная нагрузка оказывается новым стрессом</p></div>
+      <div class="card c-b"><span class="tag">Выходные</span><p>Напряжение, которое копилось долго, невозможно снять за один или два выходных</p></div>
+      <div class="card c-l"><span class="tag">Семейный отдых</span><p>Вся семья отправляется активно отдыхать, хотя кому-то из ее участников такая нагрузка совсем не нужна</p></div>
+      <div class="card c-m"><span class="tag">Свой отдых</span><p>Кому-то нужен спорт, кому-то прогулка, тишина, природа или возможность ничего не делать</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="want">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Практика из выпуска</p><h2>Что я сейчас хочу?</h2></div>
+    <div class="prose">
+      <p>Специалист предлагает несколько раз в день ставить будильник и спрашивать себя, чего хочется прямо сейчас. Желание может быть совсем небольшим. Если исполнить его сразу нельзя, с телом стоит договориться: признать желание, назначить время и действительно выполнить обещание</p>
+    </div>
+    <div class="tool">
+      <div class="step">
+        <p class="step-l"><span>1</span>Чего мне хочется прямо сейчас?</p>
+        <div class="pick" id="wantPick">
+          <button aria-pressed="false">Хочу воды</button>
+          <button aria-pressed="false">Посмотреть в окно</button>
+          <button aria-pressed="false">Поесть</button>
+          <button aria-pressed="false">Тепла</button>
+          <button aria-pressed="false">Лечь</button>
+          <button aria-pressed="false">Тишины</button>
+          <button aria-pressed="false">Вспомнить море</button>
+          <button aria-pressed="false">Просто выдохнуть</button>
+        </div>
+        <label class="note" for="wantOwn">Или напишите свое</label>
+        <input type="text" id="wantOwn" placeholder="Например, снять обувь и пройтись босиком">
+      </div>
+      <div class="step">
+        <p class="step-l"><span>2</span>Получится сделать это сейчас?</p>
+        <div class="btn-row">
+          <button class="btn" id="nowYes">Да, сделаю сейчас</button>
+          <button class="btn ghost" id="nowNo">Сейчас не получится</button>
+        </div>
+      </div>
+      <div class="step" id="laterBox" hidden>
+        <p class="step-l"><span>3</span>Когда я это сделаю?</p>
+        <div class="pick" id="whenPick">
+          <button>Через 15 минут</button>
+          <button>После встречи</button>
+          <button>В обед</button>
+          <button>Вечером</button>
+          <button>В выходные</button>
+        </div>
+      </div>
+      <p class="want-msg" id="wantMsg" hidden aria-live="polite"></p>
+    </div>
+    <div class="promises">
+      <h3>Мои договоренности с телом</h3>
+      <p class="note">Человек часто ответственно выполняет обещания перед другими и нарушает договоренности с собой. Если обещания телу постоянно нарушаются, оно перестает доверять, и связь с собственными потребностями слабеет</p>
+      <ul id="promList" class="rows"></ul>
+      <p class="card bare" id="promEmpty">Здесь появятся желания, которые вы заметили, и обещания, которые дали себе. Отмечайте выполненные, список сохраняется только в этом браузере</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cost">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Часть 6</p><h2>Тело выставляет счет</h2></div>
+    <div class="prose">
+      <p>Когда потребности долго остаются без внимания, тело находит способ о них напомнить. В разговоре упоминаются такие последствия длительной перегрузки</p>
+    </div>
+    <ul class="cost">
+      <li>Болезни в отпуске или на выходных</li>
+      <li>Скачки давления</li>
+      <li>Нагрузка на сердце и сосуды</li>
+      <li>Проблемы с пищеварением</li>
+      <li>Снижение иммунного ресурса</li>
+      <li>Психосоматические реакции</li>
+    </ul>
+    <p class="pull">В психосоматическом подходе считается, что если потребности и внутренние конфликты долго остаются без внимания, напряжение может проявляться через тело в виде симптомов, усталости или обострений заболеваний</p>
+    <p class="note">Если тело беспокоит, важно обратиться к врачу. Работа с психологом помогает разобраться с перегрузкой и хорошо дополняет медицинскую помощь</p>
+  </div>
+</section>
+
+<section class="block" id="questions">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Рекомендации из выпуска</p><h2>Что можно сделать уже сейчас</h2><p class="note">Отметьте то, что хотите попробовать на этой неделе</p></div>
+    <div>
+      <div class="practice"><div class="ic c-m">◯</div><div class="p-txt"><b>Взять ответственность за свое тело и самочувствие</b><p>Относиться к своему состоянию как к важному сигналу: замечать его, не обвинять себя, выбирать посильные действия для поддержки себя</p></div><button class="mark" data-k="p1" aria-pressed="false">Попробую</button></div>
+      <div class="practice"><div class="ic c-b">◐</div><div class="p-txt"><b>Отслеживать базовые потребности: сон, еду, воду и отдых</b><p>Обращать внимание, выспался ли я, ел ли сегодня, пил ли воду и был ли у меня хотя бы короткий отдых</p></div><button class="mark" data-k="p2" aria-pressed="false">Попробую</button></div>
+      <div class="practice"><div class="ic c-l">∿</div><div class="p-txt"><b>Замечать телесные ощущения: напряжение, холод, усталость и голод</b><p>Делать короткую «остановку» и сканировать тело: где я напряжен, что чувствую сейчас, голоден ли я, устал или мне холодно. Такие телесные сигналы помогают вовремя понять потребность и отреагировать на нее</p></div><button class="mark" data-k="p3" aria-pressed="false">Попробую</button></div>
+      <div class="practice"><div class="ic c-m">?</div><div class="p-txt"><b>Несколько раз в день спрашивать себя, чего хочется сейчас, и по возможности давать себе это</b><p>Следование за желанием укрепляет возможность хотеть</p></div><button class="mark" data-k="p4" aria-pressed="false">Попробую</button></div>
+      <div class="practice"><div class="ic c-b">⇄</div><div class="p-txt"><b>Если сейчас нельзя, договориться с собой и выполнить обещание позже</b><p>Так я сохраняю контакт с собой и учусь доверять собственным обещаниям</p></div><button class="mark" data-k="p5" aria-pressed="false">Попробую</button></div>
+    </div>
+    <div class="formula">
+      <p class="eyebrow">Мини-формула для практики</p>
+      <ol class="f-steps">
+        <li>Заметил потребность</li>
+        <li>Назвал</li>
+        <li>По возможности удовлетворил</li>
+        <li>Если нет, назначил другое возможное время</li>
+      </ol>
+    </div>
+    <h3 class="sub-h">Вопросы себе</h3>
+    <p class="note">Ответы можно записать прямо здесь, они сохранятся только в вашем браузере</p>
+    <div class="qs">
+      <div class="q open">
+        <button class="q-head" aria-expanded="true"><span class="q-num">1</span><span class="q-title">Что страшного произойдет, если я выключу телефон вечером?</span><span class="q-sign" aria-hidden="true">+</span></button>
+        <div class="q-body"><textarea id="a1" placeholder="Если я выключу телефон, то…"></textarea></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false"><span class="q-num">2</span><span class="q-title">Как я отношусь к людям, которые отдыхают, когда я работаю?</span><span class="q-sign" aria-hidden="true">+</span></button>
+        <div class="q-body" hidden><textarea id="a2" placeholder="Когда я вижу, что кто-то отдыхает…"></textarea></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false"><span class="q-num">3</span><span class="q-title">Как мой нынешний образ жизни скажется на мне через год, два или три?</span><span class="q-sign" aria-hidden="true">+</span></button>
+        <div class="q-body" hidden><textarea id="a3" placeholder="Если ничего не менять…"></textarea></div>
+      </div>
+      <div class="q">
+        <button class="q-head" aria-expanded="false"><span class="q-num">4</span><span class="q-title">Что сказала бы мне моя будущая версия в старости о том, как я сейчас обращаюсь со своим телом?</span><span class="q-sign" aria-hidden="true">+</span></button>
+        <div class="q-body" hidden><textarea id="a4" placeholder="Мне бы сказали…"></textarea></div>
+      </div>
+    </div>
+    <p class="saved note" id="savedNote" hidden>Сохранено в этом браузере</p>
+    <div class="summary" id="summary">
+      <div class="sec-head"><p class="eyebrow">Мои ответы</p><h3>Подытожить и сохранить</h3></div>
+      <p>Когда ответите на вопросы, перечитайте их целиком. Обратите внимание, что повторяется в разных ответах и что откликается сильнее всего</p>
+      <div class="sum-list" id="sumList"></div>
+      <div class="step">
+        <label class="step-l" for="a5"><span>→</span>Один небольшой шаг, который я сделаю на этой неделе</label>
+        <textarea id="a5" placeholder="Например, два вечера на этой неделе выключать телефон в 22:00"></textarea>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="copyAns">Скопировать ответы</button>
+        <a class="btn ghost" id="tgAns" href="https://t.me/share/url?url=https%3A%2F%2Fintreatment.online" target="_blank" rel="noopener">Отправить себе в Telegram</a>
+      </div>
+      <p class="note" id="copyMsg" aria-live="polite">В Telegram можно выбрать «Избранное», и ответы останутся у вас</p>
+      <textarea id="sumText" readonly hidden aria-label="Текст ответов для копирования"></textarea>
+      <p class="card c-m">С этими ответами удобно прийти на консультацию: они помогут специалисту быстрее понять, где вам сейчас тяжелее всего. <a href="#cta">Записаться к специалисту</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sum">
+  <div class="wrap stack">
+    <div class="sec-head"><p class="eyebrow">Коротко</p><h2>Главное из выпуска</h2></div>
+    <ol class="takeaways">
+      <li><span>Выгорание начинается задолго до полного истощения, и его первые признаки легко пропустить: забывчивость, раздражение, напряжение, плохой сон и привычку не замечать голод, холод и усталость</span></li>
+      <li><span>Тело невозможно бесконечно заставлять терпеть: пока психика объясняет, почему надо еще немного, тело показывает перегрузку через симптомы</span></li>
+      <li><span>Гиперответственность поддерживает хронический стресс, потому что человек берет на себя слишком много, пытается все контролировать, и нервная система остается в режиме мобилизации</span></li>
+      <li><span>Спортзал, массаж, уборка или активные выходные восстанавливают, когда совпадают с реальной потребностью тела и не становятся новой задачей</span></li>
+      <li><span>Восстановление начинается с контакта с собой, и проще всего начать с регулярного вопроса «Что я сейчас хочу?», внимания к базовым потребностям и права на паузу</span></li>
+      <li><span>Если напряжение копилось долго, одного выходного мало. Телу нужно устойчивое изменение отношения к нагрузке, отдыху и собственным потребностям, и забота о себе становится ежедневной ответственностью</span></li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<section class="cta" id="cta">
+  <div class="wrap">
+    <p class="eyebrow">Следующий шаг</p>
+    <h2>Узнали себя в этом описании?</h2>
+    <p class="lead">Если вы узнали себя в описании или в какой-то из ситуаций выпуска, можно записаться к специалисту в Telegram-боте InTreatment. Вместе с психологом проще понять, откуда берется перегрузка, и найти способы обращаться с нагрузкой, которые подходят вашей жизни</p>
+    <div class="cta-cards">
+      <a class="cta-card primary" href="https://t.me/Intreatmentpsy_bot" target="_blank" rel="noopener">
+        <span class="t">Записаться в Telegram-боте</span>
+        <span class="d">Консультация со специалистом психологического центра InTreatment</span>
+        <span class="go">@Intreatmentpsy_bot <span>↗</span></span>
+      </a>
+      <a class="cta-card" href="https://t.me/Intreatmentpsy_bot" target="_blank" rel="noopener">
+        <span class="t">Программа «Выдох»</span>
+        <span class="d">Двенадцать недель индивидуальной работы с психологом для тех, кто узнает себя в состояниях перегрузки. Можно постепенно разобраться с источниками нагрузки и научиться внимательнее относиться к своему состоянию</span>
+        <span class="go">Узнать о программе в боте <span>↗</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <a class="logo" href="https://intreatment.online" target="_blank" rel="noopener" aria-label="InTreatment"><span class="logo-word">InTreatment</span><span class="logo-sub">психологический центр</span></a>
+    <p class="note">Подкаст психологического центра InTreatment · <a href="https://intreatment.online" target="_blank" rel="noopener">intreatment.online</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  var P='tstop_';
+
+  /* signals */
+  var sigs=[].slice.call(document.querySelectorAll('#checks .sig')),dots=document.getElementById('dots');
+  sigs.forEach(function(){dots.appendChild(document.createElement('i'))});
+  function verdict(){
+    var n=sigs.filter(function(s){return s.getAttribute('aria-pressed')==='true'}).length;
+    [].slice.call(dots.children).forEach(function(d,i){d.classList.toggle('on',i<n)});
+    var T=document.getElementById('vTitle'),X=document.getElementById('vText');
+    if(n===0){T.textContent='Отметьте то, что узнаете';X.textContent='Здесь появится короткое пояснение';return}
+    if(n<=2){T.textContent='Тело уже подает сигналы';X.textContent='Сейчас хорошее время к ним прислушаться, пока они звучат тихо'}
+    else if(n<=5){T.textContent='Перегрузка заметно накопилась';X.innerHTML='Тело говорит о ней все настойчивее. Стоит посмотреть, откуда она берется, и вернуть себе паузы. Разобраться в этом можно и <a href="#cta">вместе со специалистом</a>'}
+    else{T.textContent='Сигналов много';X.innerHTML='Справляться с таким количеством сигналов в одиночку бывает трудно. Разобраться с источниками перегрузки можно <a href="#cta">вместе с психологом центра</a>'}
+  }
+  sigs.forEach(function(s){s.addEventListener('click',function(){s.setAttribute('aria-pressed',s.getAttribute('aria-pressed')==='true'?'false':'true');verdict()})});
+
+  /* nervous system */
+  var NS={
+    s:{tag:'Симпатическая система',t:'Режим мобилизации, контроля и действия',i:['Сердце бьется быстрее','Дыхание учащается','Кровь приливает к мышцам','Тело готово бежать или защищаться'],n:'При хронической перегрузке этот режим включен почти постоянно'},
+    p:{tag:'Парасимпатическая система',t:'Режим расслабления, пищеварения и восстановления',i:['Дыхание замедляется, выдох становится длиннее','Работает пищеварение','Мышцы отпускают напряжение','Тело восстанавливает силы'],n:'При постоянной перегрузке эта система оказывается как будто выключенной или подавленной'}
+  };
+  var segBtns=[].slice.call(document.querySelectorAll('.ns .seg button')),panel=document.getElementById('nsPanel');
+  function setNS(m){
+    var d=NS[m];panel.className='ns-panel '+m;
+    document.getElementById('nsTag').textContent=d.tag;
+    document.getElementById('nsTitle').textContent=d.t;
+    document.getElementById('nsNote').textContent=d.n;
+    var ul=document.getElementById('nsList');ul.innerHTML='';
+    d.i.forEach(function(x){var li=document.createElement('li');li.innerHTML='<span></span>';li.firstChild.textContent=x;ul.appendChild(li)});
+    segBtns.forEach(function(b){b.setAttribute('aria-selected',b.dataset.m===m?'true':'false')});
+  }
+  segBtns.forEach(function(b){b.addEventListener('click',function(){setNS(b.dataset.m)})});
+  setNS('s');
+
+  /* breathing */
+  var bc=document.getElementById('bCircle'),bl=document.getElementById('bLabel'),bb=document.getElementById('bBtn'),bn=document.getElementById('bCount');
+  var br={on:false,t:null,n:0};
+  function bStop(done){
+    br.on=false;clearTimeout(br.t);bc.style.transitionDuration='1.2s';bl.style.transitionDuration='1.2s';bc.classList.remove('in');bl.textContent='выдох';bb.textContent='Начать';
+    bn.textContent=done?'Готово. Заметьте, что изменилось в теле за эту минуту':'Шесть дыхательных циклов';
+  }
+  function bCycle(){
+    if(!br.on)return;
+    bc.style.transitionDuration='4s';bl.style.transitionDuration='4s';bc.classList.add('in');bl.textContent='вдох';
+    bn.textContent='Цикл '+(br.n+1)+' из 6';
+    br.t=setTimeout(function(){
+      if(!br.on)return;
+      bc.style.transitionDuration='6s';bl.style.transitionDuration='6s';bc.classList.remove('in');bl.textContent='выдох';
+      br.t=setTimeout(function(){br.n++;if(br.n>=6){bStop(true)}else{bCycle()}},6000);
+    },4000);
+  }
+  bb.addEventListener('click',function(){if(br.on){bStop(false)}else{br.on=true;br.n=0;bb.textContent='Остановить';bCycle()}});
+
+  /* zebra */
+  var Z={
+    zebra:[['Угроза','Появляется лев'],['Мобилизация','Сердце бьется быстрее, кровь приливает к мышцам, дыхание учащается'],['Действие','Зебра убегает'],['Завершение','Гормоны возвращаются к норме, и зебра снова спокойно щиплет траву']],
+    human:[['Угроза','Лев живет в голове: задачи, долги, ожидания и ответственность'],['Мобилизация','Тело готовится к побегу так же, как у зебры'],['Действие','Бежать некуда, потому что угроза остается в мыслях'],['Завершения нет','Цикл запускается снова, и напряжение остается с человеком даже на диване']]
+  };
+  var zBtns=[].slice.call(document.querySelectorAll('.zt .seg button')),track=document.getElementById('track'),loop=document.getElementById('loopNote');
+  function setZ(k){
+    track.innerHTML='';
+    Z[k].forEach(function(s,i){
+      var li=document.createElement('li');
+      if(i===3)li.className=k==='zebra'?'end-ok':'end-loop';
+      var n=document.createElement('span');n.className='n';n.textContent=i+1;
+      var b=document.createElement('b');b.textContent=s[0];
+      var p=document.createElement('p');p.textContent=s[1];
+      li.appendChild(n);li.appendChild(b);li.appendChild(p);track.appendChild(li);
+    });
+    loop.innerHTML=k==='zebra'?'<span>✓</span>Стрессовый цикл завершается, и парасимпатическая система снова берет верх':'<span>↺</span>Реакция угрозы запускается снова и снова без побега и без завершения';
+    zBtns.forEach(function(b){b.setAttribute('aria-selected',b.dataset.z===k?'true':'false')});
+  }
+  zBtns.forEach(function(b){b.addEventListener('click',function(){setZ(b.dataset.z)})});
+  setZ('zebra');
+
+  /* expandable rows + questions */
+  function accordion(sel,head,body){
+    document.querySelectorAll(sel).forEach(function(r){
+      var b=r.querySelector(head),bd=r.querySelector(body);
+      b.addEventListener('click',function(){var o=!r.classList.contains('open');r.classList.toggle('open',o);bd.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false')});
+    });
+  }
+  accordion('.rows .row','.row-head','.row-body');
+  accordion('.qs .q','.q-head','.q-body');
+  var note=document.getElementById('savedNote'),nt;
+  var QIDS=['a1','a2','a3','a4'];
+  var QT=[].slice.call(document.querySelectorAll('.qs .q-title')).map(function(e){return e.textContent});
+  var sumList=document.getElementById('sumList'),tg=document.getElementById('tgAns'),sumText=document.getElementById('sumText'),copyMsg=document.getElementById('copyMsg');
+  function plain(){
+    var d=new Date(),ds=('0'+d.getDate()).slice(-2)+'.'+('0'+(d.getMonth()+1)).slice(-2)+'.'+d.getFullYear();
+    var t='Когда тело говорит «стоп» · мои ответы, '+ds+'\n';
+    QIDS.forEach(function(id,i){var a=document.getElementById(id).value.trim();t+='\n'+(i+1)+'. '+QT[i]+'\n'+(a||'пока без ответа')+'\n'});
+    var st=document.getElementById('a5').value.trim();if(st)t+='\nМой шаг на этой неделе: '+st+'\n';
+    t+='\nКонспект подкаста психологического центра InTreatment';
+    return t;
+  }
+  function summarize(){
+    sumList.innerHTML='';
+    QIDS.forEach(function(id,i){
+      var a=document.getElementById(id).value.trim();
+      var it=document.createElement('div');it.className='sum-item';
+      var q=document.createElement('p');q.className='sq';q.textContent=(i+1)+'. '+QT[i];
+      var an=document.createElement('p');an.className='sa'+(a?'':' empty');an.textContent=a||'Пока без ответа';
+      it.appendChild(q);it.appendChild(an);sumList.appendChild(it);
+    });
+    var page=/vercel\.app$/.test(location.hostname)?location.href.split('#')[0]:'https://intreatment.online';
+    tg.href='https://t.me/share/url?url='+encodeURIComponent(page)+'&text='+encodeURIComponent(plain());
+  }
+  ['a1','a2','a3','a4','a5'].forEach(function(id){
+    var el=document.getElementById(id),v=store.get(P+id);if(v)el.value=v;
+    el.addEventListener('input',function(){store.set(P+id,el.value);if(id!=='a5'){note.hidden=false;clearTimeout(nt);nt=setTimeout(function(){note.hidden=true},1600)}summarize()});
+  });
+  summarize();
+  document.getElementById('copyAns').addEventListener('click',function(){
+    var t=plain();
+    function fallback(){sumText.hidden=false;sumText.value=t;sumText.focus();sumText.select();
+      var ok=false;try{ok=document.execCommand('copy')}catch(e){}
+      copyMsg.textContent=ok?'Ответы скопированы, их можно вставить в заметки или сообщение':'Текст выделен ниже, скопируйте его вручную';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(function(){sumText.hidden=true;copyMsg.textContent='Ответы скопированы, их можно вставить в заметки или сообщение'},fallback);
+    }else{fallback()}
+  });
+
+  /* wants + promises */
+  var want='',wantBtns=[].slice.call(document.querySelectorAll('#wantPick button')),own=document.getElementById('wantOwn');
+  var msg=document.getElementById('wantMsg'),later=document.getElementById('laterBox');
+  function say(t,warn){msg.hidden=false;msg.textContent=t;msg.classList.toggle('warn',!!warn)}
+  wantBtns.forEach(function(b){b.addEventListener('click',function(){
+    var on=b.getAttribute('aria-pressed')!=='true';
+    wantBtns.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed',on?'true':'false');want=on?b.textContent:'';if(on)own.value='';msg.hidden=true;
+  })});
+  own.addEventListener('input',function(){if(own.value.trim()){wantBtns.forEach(function(x){x.setAttribute('aria-pressed','false')})}want=own.value.trim();msg.hidden=true});
+  function current(){return (own.value.trim()||want).trim()}
+  var proms=[];try{proms=JSON.parse(store.get(P+'proms')||'[]')||[]}catch(e){proms=[]}
+  function save(){store.set(P+'proms',JSON.stringify(proms))}
+  var list=document.getElementById('promList'),empty=document.getElementById('promEmpty');
+  function render(){
+    list.innerHTML='';empty.hidden=proms.length>0;
+    proms.forEach(function(p,i){
+      var li=document.createElement('li');li.className='prom'+(p.done?' done':'');
+      var t=document.createElement('button');t.className='tick';t.setAttribute('aria-label',p.done?'Отметить как невыполненное':'Отметить как выполненное');
+      t.addEventListener('click',function(){proms[i].done=!proms[i].done;save();render()});
+      var tx=document.createElement('div');tx.className='txt';tx.textContent=p.w;
+      var sm=document.createElement('small');sm.textContent=p.now?'Сделано сразу':(p.done?'Обещание выполнено':'Обещание: '+p.when.toLowerCase());tx.appendChild(sm);
+      var d=document.createElement('button');d.className='del';d.textContent='×';d.setAttribute('aria-label','Удалить');
+      d.addEventListener('click',function(){proms.splice(i,1);save();render()});
+      li.appendChild(t);li.appendChild(tx);li.appendChild(d);list.appendChild(li);
+    });
+  }
+  function reset(){wantBtns.forEach(function(x){x.setAttribute('aria-pressed','false')});own.value='';want='';later.hidden=true}
+  document.getElementById('nowYes').addEventListener('click',function(){
+    var w=current();if(!w){say('Сначала выберите или впишите желание',true);return}
+    proms.unshift({w:w,now:true,done:true});save();render();reset();
+    say('Сделайте это прямо сейчас. Даже маленький ответ на желание возвращает контакт с телом');
+  });
+  document.getElementById('nowNo').addEventListener('click',function(){
+    if(!current()){say('Сначала выберите или впишите желание',true);return}
+    later.hidden=false;msg.hidden=true;
+  });
+  [].slice.call(document.querySelectorAll('#whenPick button')).forEach(function(b){b.addEventListener('click',function(){
+    var w=current();if(!w){say('Сначала выберите или впишите желание',true);return}
+    proms.unshift({w:w,when:b.textContent,now:false,done:false});save();render();reset();
+    say('Договоренность записана. Важно выполнить ее в срок, так тело постепенно снова начинает доверять');
+  })});
+  render();
+
+  /* practice marks */
+  document.querySelectorAll('.mark').forEach(function(m){
+    var k=P+m.dataset.k;
+    function paint(on){m.setAttribute('aria-pressed',on?'true':'false');m.textContent=on?'✓ В планах':'Попробую'}
+    paint(store.get(k)==='1');
+    m.addEventListener('click',function(){var on=m.getAttribute('aria-pressed')!=='true';paint(on);store.set(k,on?'1':'0')});
+  });
+
+  /* progress + toc */
+  var bar=document.getElementById('bar');
+  function onScroll(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?h.scrollTop/max*100:0)+'%'}
+  var toc=document.querySelector('.toc'),tw=toc.querySelector('.wrap');
+  function fit(){toc.classList.toggle('scrolls',tw.scrollWidth>tw.clientWidth+1)}
+  window.addEventListener('resize',fit);fit();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+
+</body>
+</html>
